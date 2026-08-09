@@ -101,6 +101,92 @@
       padding: 2.5rem 2rem;
     }
 
+    /* COMMUNICATIONS SECTION - special layout */
+    .comm-section {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 3rem 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .comm-section h2 {
+      font-family: 'Oswald', sans-serif;
+      color: var(--primary);
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .comm-section > p {
+      max-width: 750px;
+      margin: 0 auto 2.5rem;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    .comm-section > p a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .comm-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .comm-card {
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .comm-card .comm-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .comm-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+    .comm-card p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .comm-card .comm-link {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: underline;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: 0.5rem;
+    }
+    .comm-card .comm-link:hover {
+      color: var(--accent);
+    }
+    @media (max-width: 768px) {
+      .comm-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
     /* SECTIONS */
     section {
       background: var(--white);
@@ -342,21 +428,30 @@
 <div class="container">
 
   <!-- COMMUNICATIONS -->
-  <section id="communications">
-    <h2>Gérez vos préférences de communications</h2>
-    <p>Conformément à la Loi 25, le Regroupement applique sa Politique de confidentialité et de protection des renseignements personnels qui régit aussi les communications entre le Regroupement et ses membres.</p>
+  <div class="comm-section" id="communications">
+    <h2>Gerez vos préférences de communications</h2>
+    <p>Conformément à la Loi 25, le Regroupement applique sa <a href="docs/politique-confidentialite.pdf">Politique de confidentialité et de protection des renseignements personnels</a> qui régit aussi les communications entre le Regroupement et ses membres.</p>
 
-    <h3>Courrier indésirable</h3>
-    <p>Vérifiez vos courriels, ainsi que le dossier de courrier indésirable afin de vous assurer que nos communications sont reconnues comme légitimes par votre fournisseur de service de courriels.</p>
-
-    <h3>Abonnement</h3>
-    <p>Veuillez nous informer par courriel d'un changement d'adresse courriel, pour ajouter ou remplacer une adresse à votre dossier.</p>
-    <a href="#contact" class="btn">Contactez nous</a>
-
-    <h3>Désabonnement</h3>
-    <p>Si vous souhaitez ne pas recevoir de communications du Regroupement, veuillez nous en faire part clairement par courriel ou téléphone.</p>
-    <a href="#contact" class="btn">Contactez nous</a>
-  </section>
+    <div class="comm-grid">
+      <div class="comm-card">
+        <div class="comm-icon">?</div>
+        <h3>Courrier indésirable</h3>
+        <p>Vérifiez vos courriels, ainsi que le dossier de courrier indésirable afin de vous assurer que nos communications sont reconnues comme légitimes par votre fournisseur de service de courriels.</p>
+      </div>
+      <div class="comm-card">
+        <div class="comm-icon">✓</div>
+        <h3>Abonnement</h3>
+        <p>Veuillez nous informer par courriel d'un changement d'adresse courriel, pour ajouter ou remplacer une adresse à votre dossier.</p>
+        <a href="#contact" class="comm-link">Contactez nous</a>
+      </div>
+      <div class="comm-card">
+        <div class="comm-icon">■</div>
+        <h3>Désabonnement</h3>
+        <p>Si vous souhaitez ne pas recevoir de communications du Regroupement, veuillez nous en faire part clairement par courriel ou téléphone.</p>
+        <a href="#contact" class="comm-link">Contactez nous</a>
+      </div>
+    </div>
+  </div>
 
   <!-- NOUVELLES -->
   <section id="nouvelles">
