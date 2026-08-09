@@ -27,15 +27,14 @@
       line-height: 1.7;
       background: var(--bg);
     }
-
-    /* HEADER */
     header {
-      background: var(--primary);
+      background: var(--white);
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: var(--shadow-lg);
+      border-bottom: 1px solid var(--border);
     }
     .header-inner {
       max-width: 1100px;
@@ -50,31 +49,33 @@
       width: auto;
     }
     nav a {
-      color: var(--white);
+      color: var(--primary);
       text-decoration: none;
       margin-left: 2rem;
       font-size: 0.9rem;
       font-weight: 500;
-      opacity: 0.85;
+      opacity: 0.9;
       transition: opacity 0.2s;
       text-transform: uppercase;
       letter-spacing: 0.03em;
     }
     nav a:hover { opacity: 1; }
-
-    /* HERO */
     .hero {
-      background: url('images/hero-bg.png') center center / cover no-repeat;
+      background: url('images/hero-bg.png.png') center center / cover no-repeat;
       position: relative;
       padding: 5rem 2rem;
       text-align: center;
       color: var(--white);
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.48);
     }
     .hero-content {
       position: relative;
@@ -95,228 +96,51 @@
       margin: 0 auto;
       line-height: 1.8;
     }
-
-    /* CONTAINER */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    /* SECTIONS */
-    section {
-      background: var(--white);
-      border-radius: 8px;
-      padding: 2.5rem;
-      margin-bottom: 2rem;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-    section h2 {
-      font-family: 'Oswald', sans-serif;
-      color: var(--primary);
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 3px solid var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    section h3 {
-      color: var(--primary);
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    section h4 {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-    section p {
-      margin-bottom: 0.75rem;
-    }
-
-    /* COLLAPSIBLE */
-    .collapsible-header {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1rem;
-      background: var(--bg);
-      border-radius: 6px;
-      margin-top: 1rem;
-      font-weight: 600;
-      color: var(--primary);
-      transition: background 0.2s;
-    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; }
+    section { background: var(--white); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    section h2 { font-family: 'Oswald', sans-serif; color: var(--primary); font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid var(--accent); text-transform: uppercase; letter-spacing: 0.02em; }
+    section h3 { color: var(--primary); font-size: 1.05rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    section h4 { color: var(--text-light); font-size: 0.95rem; font-weight: 500; margin-bottom: 1rem; }
+    section p { margin-bottom: 0.75rem; }
+    .collapsible-header { cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--bg); border-radius: 6px; margin-top: 1rem; font-weight: 600; color: var(--primary); transition: background 0.2s; }
     .collapsible-header:hover { background: #EDF2F7; }
-    .collapsible-header::after {
-      content: '\25BC';
-      font-size: 0.7rem;
-      transition: transform 0.3s;
-    }
-    .collapsible-header.active::after {
-      transform: rotate(180deg);
-    }
-    .collapsible-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-    .collapsible-content.open {
-      max-height: 5000px;
-    }
-
-    /* LISTS */
+    .collapsible-header::after { content: '\25BC'; font-size: 0.7rem; transition: transform 0.3s; }
+    .collapsible-header.active::after { transform: rotate(180deg); }
+    .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .collapsible-content.open { max-height: 5000px; }
     ul { padding-left: 0; list-style: none; margin-top: 0.5rem; }
-    ul li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.95rem;
-    }
+    ul li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
     ul li:last-child { border-bottom: none; }
     ul li strong { color: var(--accent); font-weight: 600; }
-
-    /* DOCUMENT LINKS */
-    .doc-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    .doc-link {
-      display: flex;
-      align-items: center;
-      padding: 0.85rem 1.1rem;
-      background: var(--bg);
-      border-radius: 6px;
-      border-left: 4px solid var(--accent);
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.93rem;
-      font-weight: 500;
-      transition: all 0.2s;
-    }
-    .doc-link:hover {
-      background: #EDF2F7;
-      transform: translateX(3px);
-    }
-    .doc-link::before {
-      content: '\1F4C4';
-      margin-right: 0.75rem;
-      font-size: 1.1rem;
-    }
-
-    /* GOVERNANCE */
-    .role-badge {
-      display: inline-block;
-      background: var(--primary);
-      color: var(--white);
-      padding: 0.15rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-right: 0.5rem;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-    .governance-list li {
-      display: flex;
-      align-items: center;
-      padding: 0.6rem 0;
-    }
-
-    /* CONTACT */
-    .contact-card {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .contact-item .icon {
-      width: 40px;
-      height: 40px;
-      background: var(--primary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-    .contact-item a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-    }
+    .doc-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 1rem; }
+    .doc-link { display: flex; align-items: center; padding: 0.85rem 1.1rem; background: var(--bg); border-radius: 6px; border-left: 4px solid var(--accent); text-decoration: none; color: var(--text); font-size: 0.93rem; font-weight: 500; transition: all 0.2s; }
+    .doc-link:hover { background: #EDF2F7; transform: translateX(3px); }
+    .doc-link::before { content: '\1F4C4'; margin-right: 0.75rem; font-size: 1.1rem; }
+    .role-badge { display: inline-block; background: var(--primary); color: var(--white); padding: 0.15rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-right: 0.5rem; letter-spacing: 0.02em; text-transform: uppercase; }
+    .governance-list li { display: flex; align-items: center; padding: 0.6rem 0; }
+    .contact-card { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.75rem; }
+    .contact-item .icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-item a { color: var(--text); text-decoration: none; font-weight: 500; }
     .contact-item a:hover { color: var(--accent); }
-
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: var(--white);
-      padding: 0.7rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: background 0.2s;
-      margin-top: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
+    .btn { display: inline-block; background: var(--primary); color: var(--white); padding: 0.7rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; margin-top: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; }
     .btn:hover { background: var(--accent); }
-
-    /* FOOTER */
-    footer {
-      background: var(--primary);
-      color: rgba(255,255,255,0.6);
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-    }
-
-    /* MOBILE NAV */
-    .mobile-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+    footer { background: var(--primary); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.85rem; }
+    .mobile-toggle { display: none; background: none; border: none; color: var(--primary); font-size: 1.5rem; cursor: pointer; }
     @media (max-width: 768px) {
       .header-inner { flex-wrap: wrap; }
       .mobile-toggle { display: block; }
-      nav {
-        display: none;
-        width: 100%;
-        padding-top: 1rem;
-      }
+      nav { display: none; width: 100%; padding-top: 1rem; }
       nav.open { display: flex; flex-direction: column; gap: 0.75rem; }
       nav a { margin-left: 0; }
       .hero h1 { font-size: 1.8rem; }
-      .hero { padding: 3.5rem 1.5rem; }
+      .hero { padding: 3.5rem 1.5rem; min-height: 340px; }
       section { padding: 1.5rem; }
       .logo img { height: 40px; }
     }
   </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo">
@@ -332,235 +156,22 @@
     </nav>
   </div>
 </header>
-
-<!-- HERO -->
 <div class="hero">
   <div class="hero-content">
     <h1>Restez informés, restez unis</h1>
     <p>Bienvenue sur le portail des membres du Regroupement des pompiers volontaires du Grand Gaspé, conçu pour permettre aux membres un accès simple et rapide pour consulter les dernières nouvelles, accéder aux documents importants et suivre le calendrier des événements.</p>
   </div>
 </div>
-
 <div class="container">
-
-  <!-- COMMUNICATIONS -->
-  <section id="communications">
-    <h2>Gérez vos préférences de communications</h2>
-    <p>Conformément à la Loi 25, le Regroupement applique sa Politique de confidentialité et de protection des renseignements personnels qui régit aussi les communications entre le Regroupement et ses membres.</p>
-
-    <h3>Courrier indésirable</h3>
-    <p>Vérifiez vos courriels, ainsi que le dossier de courrier indésirable afin de vous assurer que nos communications sont reconnues comme légitimes par votre fournisseur de service de courriels.</p>
-
-    <h3>Abonnement</h3>
-    <p>Veuillez nous informer par courriel d'un changement d'adresse courriel, pour ajouter ou remplacer une adresse à votre dossier.</p>
-    <a href="#contact" class="btn">Contactez nous</a>
-
-    <h3>Désabonnement</h3>
-    <p>Si vous souhaitez ne pas recevoir de communications du Regroupement, veuillez nous en faire part clairement par courriel ou téléphone.</p>
-    <a href="#contact" class="btn">Contactez nous</a>
-  </section>
-
-  <!-- NOUVELLES -->
-  <section id="nouvelles">
-    <h2>Nouvelles et communiqués</h2>
-    <h4>Voici les communications récentes et à venir:</h4>
-    <ul>
-      <li><strong>2025-02-20</strong> - MODIFICATION: Avis de convocation à une assemblée générale des membres (2026-03-02)</li>
-      <li><strong>2025-02-02</strong> - Avis de convocation à une assemblée générale des membres (2026-03-12)</li>
-      <li><strong>2025-12-15</strong> - Avis de signature de la nouvelle entente de travail 2023-2027</li>
-      <li><strong>2024-12-06</strong> - Avis de convocation à une assemblée générale des membres (2024-12-17)</li>
-      <li><strong>2024-12-05</strong> - Avis de changement d'occupation de postes (suite à 2 démissions)</li>
-      <li><strong>2024-12-01</strong> - Avis de convocation à l'Assemblée du conseil élargi (CMEL-24D)</li>
-      <li><strong>2024-11-26</strong> - RAPPEL: Invitation à la caserne pour discussions et réception de propositions</li>
-      <li><strong>2024-11-21</strong> - Invitation à la caserne pour discussions et réception de propositions reliées aux négociations</li>
-      <li><strong>2024-11-17</strong> - MODIFICATION: Avis de convocation à l'assemblée du Conseil élargi (CMEL-24A)</li>
-      <li><strong>2024-11-16</strong> - Avis de convocation à l'assemblée du Conseil d'administration (CMEX-24A)</li>
-      <li><strong>2024-11-16</strong> - Liens aux Procès verbaux de l'Assemblée extraordinaire et l'AGA du 2024-11-06</li>
-      <li><strong>2024-10-28</strong> - Présentation préliminaire des documents pour les assemblées des membres</li>
-      <li><strong>2024-10-25</strong> - Lancement des activités et des communications du Regroupement</li>
-      <li><strong>2024-10-25</strong> - Avis de convocation à l'Assemblée extraordinaire et à l'AGA 2024</li>
-      <li><strong>2024-10-25</strong> - Formulaire web pour confirmer participation</li>
-      <li><strong>2024-10-25</strong> - Appel à propositions via sondage confidentiel pour la nouvelle Entente de travail</li>
-      <li><strong>2024-10-24</strong> - Formulaire web de déposition de propositions</li>
-    </ul>
-  </section>
-
-  <!-- DOCUMENTS -->
-  <section id="documents">
-    <h2>Documents du Regroupement</h2>
-    <h4>Cliquez sur l'un des documents suivants pour le consulter et/ou télécharger:</h4>
-    <div class="doc-grid">
-      <a class="doc-link" href="docs/reglement-no1.pdf">Règlement No. 1 du Regroupement</a>
-      <a class="doc-link" href="docs/reglement-no2.pdf">Règlement No. 2 du Regroupement</a>
-      <a class="doc-link" href="docs/entente-travail-2023-2029.pdf">Entente de travail (2023-01-01 à 2029-12-31; effectif 2025-12-15 avec rétro)</a>
-      <a class="doc-link" href="docs/salaires-2025.pdf">Salaires des pompiers 2025, incluant le rétro 2023-2029</a>
-      <a class="doc-link" href="docs/assurances-vie-2026.pdf">2026-01-25 - Assurances vie - augmentation de la prestation</a>
-      <a class="doc-link" href="docs/entente-travail-2016-2022.pdf">Entente de travail (2016-01-01 à 2022-12-31; expirée mais toujours en vigueur)</a>
-      <a class="doc-link" href="docs/salaires-2024.pdf">Salaires des pompiers 2024, incluant le rétro</a>
-      <a class="doc-link" href="docs/politique-confidentialite.pdf">Politique de confidentialité et de protection des renseignements personnels</a>
-      <a class="doc-link" href="docs/pv-aga-2024-11-06.pdf">PV - Assemblée générale annuelle du 2024-11-06</a>
-      <a class="doc-link" href="docs/pv-ae-2024-11-06.pdf">PV - Assemblée extraordinaire des membres du 2024-11-06</a>
-      <a class="doc-link" href="docs/pv-ca-2024-11-17.pdf">PV - Assemblée du Conseil d'administration du 2024-11-17</a>
-      <a class="doc-link" href="docs/pv-cel-2024-11-19.pdf">PV - Assemblée du Conseil élargi du 2024-11-19</a>
-      <a class="doc-link" href="docs/pv-cel-2024-11-24.pdf">PV - Assemblée du Conseil élargi du 2024-11-24</a>
-    </div>
-  </section>
-
-  <!-- CALENDRIER -->
-  <section id="calendrier">
-    <h2>Calendrier</h2>
-    <h4>Cliquez sur une liste d'événements pour la faire apparaître / développer:</h4>
-
-    <div class="collapsible-header active" onclick="toggleCollapsible(this)">Planifiés et à venir</div>
-    <div class="collapsible-content open">
-      <ul>
-        <li><strong>2026-03-02</strong> - Assemblée générale annuelle 2026</li>
-        <li><strong>2026-03-12</strong> - Réunion entre le Comité de relations de travail et la Partie patronale (première de 2026)</li>
-      </ul>
-      <p style="color: var(--text-light); font-style: italic; margin-top: 0.5rem;">... autres dates à être confirmées.</p>
-    </div>
-
-    <div class="collapsible-header" onclick="toggleCollapsible(this)">Récents</div>
-    <div class="collapsible-content">
-      <ul>
-        <li><strong>2025-08-20</strong> - Réunion entre le Comité de négociation et la partie patronale pour présenter l'état des opinions des membres sur la contre-proposition</li>
-        <li><strong>2025-08-13</strong> - Assemblée extraordinaire des membres (suite à AE du 2025-08-07) pour la présentation de la contre-proposition par le Comité de négociation et discussion entre membres</li>
-        <li><strong>2025-08-07</strong> - Assemblée extraordinaire des membres pour la présentation, discussion et adoption de la contre-proposition de la partie patronale</li>
-        <li><strong>2025-07-03</strong> - Réunion entre le Comité de négociation et la partie patronale pour recevoir officiellement les commentaires, rétroactions et contre-offres</li>
-        <li><strong>2025-05-05</strong> - Réunion entre le Comité de négociation et la partie patronale</li>
-        <li><strong>2025-03-05</strong> - Réunion entre le Comité de négociation et la partie patronale</li>
-        <li><strong>2025-02-05</strong> - Réunion entre le Comité de négociation et la partie patronale</li>
-        <li><strong>2025-01-22</strong> - Réunion entre le Comité de négociation et la partie patronale</li>
-        <li><strong>2024-12-18</strong> - Réunion entre le Comité de négociation et la partie patronale pour déposer et discuter officiellement les demandes</li>
-        <li><strong>2024-12-17</strong> - 19h00 - AG des membres du Regroupement pour discuter des points apportés de la partie patronale</li>
-        <li><strong>2024-12-08</strong> - Assemblée du Conseil élargi pour réviser l'ensemble des propositions</li>
-        <li><strong>2024-11-30</strong> - Date limite pour la consolidation dans la base de données des propositions</li>
-        <li><strong>2024-11-28</strong> - Date limite pour les représentants de secteur du Comité élargi pour remettre les propositions</li>
-        <li><strong>2024-11-27</strong> - 19h00 - Rassemblement des pompiers des casernes 45, 46, 47, 52</li>
-        <li><strong>2024-11-26</strong> - 19h00 - Rassemblement des pompiers des casernes 48 et 49 @ Caserne 48</li>
-        <li><strong>2024-11-26</strong> - Réunion entre le Comité de négociation et la partie patronale pour mise à jour et introductions</li>
-        <li><strong>2024-11-24</strong> - 19h00 - Assemblée du Conseil élargi (avec élections du Comité de négociation) @ Google Meet</li>
-        <li><strong>2024-11-19</strong> - 19h30 - Assemblée du Conseil élargi (avec élections du Comité de négociation) @ Google Meet</li>
-        <li><strong>2024-11-17</strong> - 15h00 - Assemblée du Conseil d'administration @ Google Meet</li>
-        <li><strong>2024-11-17</strong> - 14h30 - Assemblée du Conseil élargi (déplacé au 2024-11-19)</li>
-        <li><strong>2024-11-06</strong> - 19h45 - Assemblée annuelle générale des membres @ Salle de St-Majorique</li>
-        <li><strong>2024-11-06</strong> - 19h00 - Assemblée extraordinaire des membres @ Salle de St-Majorique</li>
-        <li><strong>2024-11-06</strong> - Date limite pour les membres de répondre au sondage confidentiel de propositions #2024-01</li>
-        <li><strong>2024-11-05</strong> - Envoie du document de proposition par le CA pour le Règlement No. 1</li>
-        <li><strong>2024-11-05</strong> - Envoie d'un rappel de l'Avis de convocation aux membres</li>
-        <li><strong>2024-11-03</strong> - Date limite pour les membres d'envoyer leur propositions par voie de sondage confidentiel #2024-01</li>
-        <li><strong>2024-10-25</strong> - Envoie de premières communications officielles du CA depuis l'AGA de 2022</li>
-        <li><strong>2024-10-25</strong> - Envoie de l'Avis de convocation aux membres pour l'AGA et l'AG des membres</li>
-        <li><strong>2024-10-16</strong> - Réunion informelle entre le CA et la partie patronale pour établir un échéancier</li>
-        <li><strong>2024-09-08</strong> - Réunion extraordinaire des membres pour présenter et adopter le Règlement No. 2</li>
-        <li><strong>2023-11-07</strong> - Réunion informelle entre le CA et la partie patronale pour déterminer l'échéancier préliminaire de la Ville</li>
-        <li><strong>2023-10-27</strong> - Réunion AGA 2021 (Partie 2) à la Salle de St-Majorique</li>
-        <li><strong>2023-09-08</strong> - Réunion AGA 2021 (Partie 1) à la Salle de St-Majorique</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- GOUVERNANCE -->
-  <section id="gouvernance">
-    <h2>Gouvernance</h2>
-    <p>Le mandat des postes du Conseil d'administration et des Personnes dirigeantes est de trois (3) ans ou aussi longtemps que les personnes leur succédant n'ont pas été élues.</p>
-
-    <h3>Personne responsable de la protection des renseignements personnels, conformément à la Loi 25, effectif le 2024-11-05:</h3>
-    <p>Adam Normand</p>
-
-    <h3>Conseil d'administration effectif le 2024-11-07</h3>
-    <ul class="governance-list">
-      <li><span class="role-badge">Président</span> Adam Normand</li>
-      <li><span class="role-badge">Sécrétaire</span> Julie Samson (démission le 2024-11-18; comblé en intérim le 2024-11-20 par Louis-Philippe Laurin)</li>
-      <li><span class="role-badge">Trésorier</span> Bruno Lévesque</li>
-    </ul>
-
-    <h3>Conseil élargi effectif le 2024-11-07</h3>
-    <ul class="governance-list">
-      <li><span class="role-badge">Président</span> Adam Normand</li>
-      <li><span class="role-badge">Sécrétaire</span> Julie Samson (démission le 2024-11-18; comblé en intérim le 2024-11-20 par Louis-Philippe Laurin)</li>
-      <li><span class="role-badge">Trésorier</span> Bruno Lévesque</li>
-      <li><span class="role-badge">Délégué Nord</span> Jonathan Leblanc</li>
-      <li><span class="role-badge">Délégué Nord</span> Jean-Michel Aspirault (démission le 2024-12-04; poste vacant depuis)</li>
-      <li><span class="role-badge">Délégué Nord</span> Julien Tissier</li>
-      <li><span class="role-badge">Délégué Sud</span> Marco Dubé</li>
-      <li><span class="role-badge">Délégué Sud</span> Mitchell Légresley</li>
-      <li><span class="role-badge">Délégué Sud</span> Charles-Olivier Henry (membre démissionné du Conseil)</li>
-    </ul>
-
-    <h3>Comité de négociation</h3>
-    <ul>
-      <li>Personnes nommés vers le 2024-11-18</li>
-      <li>Doit avoir au moins un membre du Conseil d'administration</li>
-      <li>Peut comprendre autant de membres du Conseil élargi que le Conseil souhaite, à l'intérieur du nombre maximum prévu par le Règlement No. 1</li>
-      <li>Peut comprendre des membres qui ne sont pas du Conseil d'administration ni du Conseil élargi</li>
-    </ul>
-
-    <h3>Comité central de négociation</h3>
-    <ul>
-      <li>Personnes nommés vers le 2024-11-18</li>
-      <li>Comprend les membres du Conseil élargi et du Comité de négociation</li>
-      <li>Il se peut que le Comité de négociation soit composé à 100% de membres ayant déjà un rôle au Conseil élargi.</li>
-    </ul>
-  </section>
-
-  <!-- RESSOURCES -->
-  <section id="ressources">
-    <h2>Ressources</h2>
-    <h4>Voici les documents fournis par l'employeur.</h4>
-    <div class="doc-grid">
-      <a class="doc-link" href="docs/salaires-2024.pdf">Salaires des pompiers 2024, incluant le rétro, selon l'indexation de la convention générale de la Ville</a>
-      <a class="doc-link" href="docs/entente-travail-2016-2022.pdf">Entente de travail (2016-01-01 à 2022-12-31; expirée mais toujours en vigueur)</a>
-      <a class="doc-link" href="docs/modification-entente-2024-09-27.pdf">2024-09-27 - Modification mineur à l'Entente (V2016-01-01) - ajout du jour férié de la vérité et de la réconciliation</a>
-      <a class="doc-link" href="docs/ssq-brochure-assurances.pdf">SSQ Groupe Financier - Brochure Régime d'assurances collectives des Pompiers de la Ville de Gaspé</a>
-      <a class="doc-link" href="docs/ssq-resume-assurances.pdf">SSQ Groupe Financier - Document résumé sur les Assurances collectives</a>
-      <a class="doc-link" href="docs/axa-assurance-vie.pdf">AXA - Assurances vie 100K$</a>
-      <a class="doc-link" href="docs/organigramme-ssi-2024.pdf">Organigramme du SSI Gaspé - Août 2024</a>
-      <a class="doc-link" href="docs/description-pompier-tp.pdf">Description de la fonction - Pompier à temps partiel</a>
-      <a class="doc-link" href="docs/description-lieutenant-tp.pdf">Description de la fonction - Lieutenant à temps partiel</a>
-      <a class="doc-link" href="docs/programme-prevention-2024.pdf">Programme de prévention Service protection contre les incendies 2024-10-30</a>
-      <a class="doc-link" href="docs/guide-entretien-habit.pdf">Guide d'entretien de l'habit de combat (fourni par les RH de la Ville le 2024-10-30)</a>
-      <a class="doc-link" href="docs/formulaire-accuse-reception.pdf">Formulaire d'accusé de réception / engagement (fourni par les RH de la Ville le 2024-10-30)</a>
-      <a class="doc-link" href="docs/pon-001-sorties-unites.pdf">PON-001 - Sorties des unités (V2015-06-01)</a>
-      <a class="doc-link" href="docs/pon-002-personnel-unites.pdf">PON-002 - Personnel à bord des unités (V2015-06-01)</a>
-      <a class="doc-link" href="docs/pon-003-vehicule-etat-major.pdf">PON-003 - Véhicule d'état major (V2015-06-01)</a>
-      <a class="doc-link" href="docs/pon-004-prise-presences.pdf">PON-004 - Prise de présences (V2015-06-01)</a>
-      <a class="doc-link" href="docs/pon-005-programme-entrainement.pdf">PON-005 - Programme d'entraînement des pompiers (V2018-01-01)</a>
-      <a class="doc-link" href="docs/pon-006-denombrement.pdf">PON-006 - Dénombrement des pompiers (V2020-11-01)</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <div class="contact-card">
-      <div class="contact-item">
-        <div class="icon">📍</div>
-        <div>148, boul. de Gaspé, Gaspé (QC) G4X 1A9</div>
-      </div>
-      <div class="contact-item">
-        <div class="icon">✉️</div>
-        <a href="mailto:regroupement@incendiegaspe.com">regroupement@incendiegaspe.com</a>
-      </div>
-      <div class="contact-item">
-        <div class="icon">📞</div>
-        <a href="tel:+15142223064">+1 514-222-3064</a>
-      </div>
-    </div>
-  </section>
-
+  <section id="communications"><h2>Gérez vos préférences de communications</h2><p>Conformément à la Loi 25, le Regroupement applique sa Politique de confidentialité et de protection des renseignements personnels qui régit aussi les communications entre le Regroupement et ses membres.</p><h3>Courrier indésirable</h3><p>Vérifiez vos courriels, ainsi que le dossier de courrier indésirable afin de vous assurer que nos communications sont reconnues comme légitimes par votre fournisseur de service de courriels.</p><h3>Abonnement</h3><p>Veuillez nous informer par courriel d'un changement d'adresse courriel, pour ajouter ou remplacer une adresse à votre dossier.</p><a href="#contact" class="btn">Contactez nous</a><h3>Désabonnement</h3><p>Si vous souhaitez ne pas recevoir de communications du Regroupement, veuillez nous en faire part clairement par courriel ou téléphone.</p><a href="#contact" class="btn">Contactez nous</a></section>
+  <section id="nouvelles"><h2>Nouvelles et communiqués</h2><h4>Voici les communications récentes et à venir:</h4><ul><li><strong>2025-02-20</strong> - MODIFICATION: Avis de convocation à une assemblée générale des membres (2026-03-02)</li><li><strong>2025-02-02</strong> - Avis de convocation à une assemblée générale des membres (2026-03-12)</li><li><strong>2025-12-15</strong> - Avis de signature de la nouvelle entente de travail 2023-2027</li><li><strong>2024-12-06</strong> - Avis de convocation à une assemblée générale des membres (2024-12-17)</li><li><strong>2024-12-05</strong> - Avis de changement d'occupation de postes (suite à 2 démissions)</li><li><strong>2024-12-01</strong> - Avis de convocation à l'Assemblée du conseil élargi (CMEL-24D)</li><li><strong>2024-11-26</strong> - RAPPEL: Invitation à la caserne pour discussions et réception de propositions</li><li><strong>2024-11-21</strong> - Invitation à la caserne pour discussions et réception de propositions reliées aux négociations</li><li><strong>2024-11-17</strong> - MODIFICATION: Avis de convocation à l'assemblée du Conseil élargi (CMEL-24A)</li><li><strong>2024-11-16</strong> - Avis de convocation à l'assemblée du Conseil d'administration (CMEX-24A)</li><li><strong>2024-11-16</strong> - Liens aux Procès verbaux de l'Assemblée extraordinaire et l'AGA du 2024-11-06</li><li><strong>2024-10-28</strong> - Présentation préliminaire des documents pour les assemblées des membres</li><li><strong>2024-10-25</strong> - Lancement des activités et des communications du Regroupement</li><li><strong>2024-10-25</strong> - Avis de convocation à l'Assemblée extraordinaire et à l'AGA 2024</li><li><strong>2024-10-25</strong> - Formulaire web pour confirmer participation</li><li><strong>2024-10-25</strong> - Appel à propositions via sondage confidentiel pour la nouvelle Entente de travail</li><li><strong>2024-10-24</strong> - Formulaire web de déposition de propositions</li></ul></section>
+  <section id="documents"><h2>Documents du Regroupement</h2><h4>Cliquez sur l'un des documents suivants pour le consulter et/ou télécharger:</h4><div class="doc-grid"><a class="doc-link" href="docs/reglement-no1.pdf">Règlement No. 1 du Regroupement</a><a class="doc-link" href="docs/reglement-no2.pdf">Règlement No. 2 du Regroupement</a><a class="doc-link" href="docs/entente-travail-2023-2029.pdf">Entente de travail (2023-01-01 à 2029-12-31; effectif 2025-12-15 avec rétro)</a><a class="doc-link" href="docs/salaires-2025.pdf">Salaires des pompiers 2025, incluant le rétro 2023-2029</a><a class="doc-link" href="docs/assurances-vie-2026.pdf">2026-01-25 - Assurances vie - augmentation de la prestation</a><a class="doc-link" href="docs/entente-travail-2016-2022.pdf">Entente de travail (2016-01-01 à 2022-12-31; expirée mais toujours en vigueur)</a><a class="doc-link" href="docs/salaires-2024.pdf">Salaires des pompiers 2024, incluant le rétro</a><a class="doc-link" href="docs/politique-confidentialite.pdf">Politique de confidentialité et de protection des renseignements personnels</a><a class="doc-link" href="docs/pv-aga-2024-11-06.pdf">PV - Assemblée générale annuelle du 2024-11-06</a><a class="doc-link" href="docs/pv-ae-2024-11-06.pdf">PV - Assemblée extraordinaire des membres du 2024-11-06</a><a class="doc-link" href="docs/pv-ca-2024-11-17.pdf">PV - Assemblée du Conseil d'administration du 2024-11-17</a><a class="doc-link" href="docs/pv-cel-2024-11-19.pdf">PV - Assemblée du Conseil élargi du 2024-11-19</a><a class="doc-link" href="docs/pv-cel-2024-11-24.pdf">PV - Assemblée du Conseil élargi du 2024-11-24</a></div></section>
+  <section id="calendrier"><h2>Calendrier</h2><h4>Cliquez sur une liste d'événements pour la faire apparaître / développer:</h4><div class="collapsible-header active" onclick="toggleCollapsible(this)">Planifiés et à venir</div><div class="collapsible-content open"><ul><li><strong>2026-03-02</strong> - Assemblée générale annuelle 2026</li><li><strong>2026-03-12</strong> - Réunion entre le Comité de relations de travail et la Partie patronale (première de 2026)</li></ul><p style="color: var(--text-light); font-style: italic; margin-top: 0.5rem;">... autres dates à être confirmées.</p></div><div class="collapsible-header" onclick="toggleCollapsible(this)">Récents</div><div class="collapsible-content"><ul><li><strong>2025-08-20</strong> - Réunion entre le Comité de négociation et la partie patronale pour présenter l'état des opinions des membres sur la contre-proposition</li><li><strong>2025-08-13</strong> - Assemblée extraordinaire des membres (suite à AE du 2025-08-07) pour la présentation de la contre-proposition par le Comité de négociation et discussion entre membres</li><li><strong>2025-08-07</strong> - Assemblée extraordinaire des membres pour la présentation, discussion et adoption de la contre-proposition de la partie patronale</li><li><strong>2025-07-03</strong> - Réunion entre le Comité de négociation et la partie patronale pour recevoir officiellement les commentaires, rétroactions et contre-offres</li><li><strong>2025-05-05</strong> - Réunion entre le Comité de négociation et la partie patronale</li><li><strong>2025-03-05</strong> - Réunion entre le Comité de négociation et la partie patronale</li><li><strong>2025-02-05</strong> - Réunion entre le Comité de négociation et la partie patronale</li><li><strong>2025-01-22</strong> - Réunion entre le Comité de négociation et la partie patronale</li><li><strong>2024-12-18</strong> - Réunion entre le Comité de négociation et la partie patronale pour déposer et discuter officiellement les demandes</li><li><strong>2024-12-17</strong> - 19h00 - AG des membres du Regroupement pour discuter des points apportés de la partie patronale</li><li><strong>2024-12-08</strong> - Assemblée du Conseil élargi pour réviser l'ensemble des propositions</li><li><strong>2024-11-30</strong> - Date limite pour la consolidation dans la base de données des propositions</li><li><strong>2024-11-28</strong> - Date limite pour les représentants de secteur du Comité élargi pour remettre les propositions</li><li><strong>2024-11-27</strong> - 19h00 - Rassemblement des pompiers des casernes 45, 46, 47, 52</li><li><strong>2024-11-26</strong> - 19h00 - Rassemblement des pompiers des casernes 48 et 49 @ Caserne 48</li><li><strong>2024-11-26</strong> - Réunion entre le Comité de négociation et la partie patronale pour mise à jour et introductions</li><li><strong>2024-11-24</strong> - 19h00 - Assemblée du Conseil élargi (avec élections du Comité de négociation) @ Google Meet</li><li><strong>2024-11-19</strong> - 19h30 - Assemblée du Conseil élargi (avec élections du Comité de négociation) @ Google Meet</li><li><strong>2024-11-17</strong> - 15h00 - Assemblée du Conseil d'administration @ Google Meet</li><li><strong>2024-11-17</strong> - 14h30 - Assemblée du Conseil élargi (déplacé au 2024-11-19)</li><li><strong>2024-11-06</strong> - 19h45 - Assemblée annuelle générale des membres @ Salle de St-Majorique</li><li><strong>2024-11-06</strong> - 19h00 - Assemblée extraordinaire des membres @ Salle de St-Majorique</li><li><strong>2024-11-06</strong> - Date limite pour les membres de répondre au sondage confidentiel de propositions #2024-01</li><li><strong>2024-11-05</strong> - Envoie du document de proposition par le CA pour le Règlement No. 1</li><li><strong>2024-11-05</strong> - Envoie d'un rappel de l'Avis de convocation aux membres</li><li><strong>2024-11-03</strong> - Date limite pour les membres d'envoyer leur propositions par voie de sondage confidentiel #2024-01</li><li><strong>2024-10-25</strong> - Envoie de premières communications officielles du CA depuis l'AGA de 2022</li><li><strong>2024-10-25</strong> - Envoie de l'Avis de convocation aux membres pour l'AGA et l'AG des membres</li><li><strong>2024-10-16</strong> - Réunion informelle entre le CA et la partie patronale pour établir un échéancier</li><li><strong>2024-09-08</strong> - Réunion extraordinaire des membres pour présenter et adopter le Règlement No. 2</li><li><strong>2023-11-07</strong> - Réunion informelle entre le CA et la partie patronale pour déterminer l'échéancier préliminaire de la Ville</li><li><strong>2023-10-27</strong> - Réunion AGA 2021 (Partie 2) à la Salle de St-Majorique</li><li><strong>2023-09-08</strong> - Réunion AGA 2021 (Partie 1) à la Salle de St-Majorique</li></ul></div></section>
+  <section id="gouvernance"><h2>Gouvernance</h2><p>Le mandat des postes du Conseil d'administration et des Personnes dirigeantes est de trois (3) ans ou aussi longtemps que les personnes leur succédant n'ont pas été élues.</p><h3>Personne responsable de la protection des renseignements personnels, conformément à la Loi 25, effectif le 2024-11-05:</h3><p>Adam Normand</p><h3>Conseil d'administration effectif le 2024-11-07</h3><ul class="governance-list"><li><span class="role-badge">Président</span> Adam Normand</li><li><span class="role-badge">Sécrétaire</span> Julie Samson (démission le 2024-11-18; comblé en intérim le 2024-11-20 par Louis-Philippe Laurin)</li><li><span class="role-badge">Trésorier</span> Bruno Lévesque</li></ul><h3>Conseil élargi effectif le 2024-11-07</h3><ul class="governance-list"><li><span class="role-badge">Président</span> Adam Normand</li><li><span class="role-badge">Sécrétaire</span> Julie Samson (démission le 2024-11-18; comblé en intérim le 2024-11-20 par Louis-Philippe Laurin)</li><li><span class="role-badge">Trésorier</span> Bruno Lévesque</li><li><span class="role-badge">Délégué Nord</span> Jonathan Leblanc</li><li><span class="role-badge">Délégué Nord</span> Jean-Michel Aspirault (démission le 2024-12-04; poste vacant depuis)</li><li><span class="role-badge">Délégué Nord</span> Julien Tissier</li><li><span class="role-badge">Délégué Sud</span> Marco Dubé</li><li><span class="role-badge">Délégué Sud</span> Mitchell Légresley</li><li><span class="role-badge">Délégué Sud</span> Charles-Olivier Henry (membre démissionné du Conseil)</li></ul><h3>Comité de négociation</h3><ul><li>Personnes nommés vers le 2024-11-18</li><li>Doit avoir au moins un membre du Conseil d'administration</li><li>Peut comprendre autant de membres du Conseil élargi que le Conseil souhaite, à l'intérieur du nombre maximum prévu par le Règlement No. 1</li><li>Peut comprendre des membres qui ne sont pas du Conseil d'administration ni du Conseil élargi</li></ul><h3>Comité central de négociation</h3><ul><li>Personnes nommés vers le 2024-11-18</li><li>Comprend les membres du Conseil élargi et du Comité de négociation</li><li>Il se peut que le Comité de négociation soit composé à 100% de membres ayant déjà un rôle au Conseil élargi.</li></ul></section>
+  <section id="ressources"><h2>Ressources</h2><h4>Voici les documents fournis par l'employeur.</h4><div class="doc-grid"><a class="doc-link" href="docs/salaires-2024.pdf">Salaires des pompiers 2024, incluant le rétro, selon l'indexation de la convention générale de la Ville</a><a class="doc-link" href="docs/entente-travail-2016-2022.pdf">Entente de travail (2016-01-01 à 2022-12-31; expirée mais toujours en vigueur)</a><a class="doc-link" href="docs/modification-entente-2024-09-27.pdf">2024-09-27 - Modification mineur à l'Entente (V2016-01-01) - ajout du jour férié de la vérité et de la réconciliation</a><a class="doc-link" href="docs/ssq-brochure-assurances.pdf">SSQ Groupe Financier - Brochure Régime d'assurances collectives des Pompiers de la Ville de Gaspé</a><a class="doc-link" href="docs/ssq-resume-assurances.pdf">SSQ Groupe Financier - Document résumé sur les Assurances collectives</a><a class="doc-link" href="docs/axa-assurance-vie.pdf">AXA - Assurances vie 100K$</a><a class="doc-link" href="docs/organigramme-ssi-2024.pdf">Organigramme du SSI Gaspé - Août 2024</a><a class="doc-link" href="docs/description-pompier-tp.pdf">Description de la fonction - Pompier à temps partiel</a><a class="doc-link" href="docs/description-lieutenant-tp.pdf">Description de la fonction - Lieutenant à temps partiel</a><a class="doc-link" href="docs/programme-prevention-2024.pdf">Programme de prévention Service protection contre les incendies 2024-10-30</a><a class="doc-link" href="docs/guide-entretien-habit.pdf">Guide d'entretien de l'habit de combat (fourni par les RH de la Ville le 2024-10-30)</a><a class="doc-link" href="docs/formulaire-accuse-reception.pdf">Formulaire d'accusé de réception / engagement (fourni par les RH de la Ville le 2024-10-30)</a><a class="doc-link" href="docs/pon-001-sorties-unites.pdf">PON-001 - Sorties des unités (V2015-06-01)</a><a class="doc-link" href="docs/pon-002-personnel-unites.pdf">PON-002 - Personnel à bord des unités (V2015-06-01)</a><a class="doc-link" href="docs/pon-003-vehicule-etat-major.pdf">PON-003 - Véhicule d'état major (V2015-06-01)</a><a class="doc-link" href="docs/pon-004-prise-presences.pdf">PON-004 - Prise de présences (V2015-06-01)</a><a class="doc-link" href="docs/pon-005-programme-entrainement.pdf">PON-005 - Programme d'entraînement des pompiers (V2018-01-01)</a><a class="doc-link" href="docs/pon-006-denombrement.pdf">PON-006 - Dénombrement des pompiers (V2020-11-01)</a></div></section>
+  <section id="contact"><h2>Contactez-nous</h2><div class="contact-card"><div class="contact-item"><div class="icon">📍</div><div>148, boul. de Gaspé, Gaspé (QC) G4X 1A9</div></div><div class="contact-item"><div class="icon">✉️</div><a href="mailto:regroupement@incendiegaspe.com">regroupement@incendiegaspe.com</a></div><div class="contact-item"><div class="icon">📞</div><a href="tel:+15142223064">+1 514-222-3064</a></div></div></section>
 </div>
-
-<footer>
-  &copy; 2024-2026 Regroupement des pompiers volontaires du Grand Gaspé. Tous droits réservés.
-</footer>
-
-<script>
-function toggleCollapsible(el) {
-  el.classList.toggle('active');
-  el.nextElementSibling.classList.toggle('open');
-}
-</script>
-
+<footer>&copy; 2024-2026 Regroupement des pompiers volontaires du Grand Gaspé. Tous droits réservés.</footer>
+<script>function toggleCollapsible(el){el.classList.toggle('active');el.nextElementSibling.classList.toggle('open');}</script>
 </body>
 </html>
