@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regroupement des pompiers volontaires du Grand Gaspé</title>
+  <style>
+    :root {
+      --red: #c0392b;
+      --dark: #1a1a2e;
+      --light: #f5f5f5;
+      --accent: #e74c3c;
+      --text: #333;
+      --border: #ddd;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--light);
+    }
+    header {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    section h2 {
+      color: var(--red);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+    section h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    ul li:last-child { border-bottom: none; }
+    a {
+      color: var(--red);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover { text-decoration: underline; }
+    .doc-link {
+      display: block;
+      padding: 0.75rem 1rem;
+      margin: 0.5rem 0;
+      background: var(--light);
+      border-radius: 6px;
+      border-left: 4px solid var(--accent);
+      transition: background 0.2s;
+    }
+    .doc-link:hover {
+      background: #ffe8e6;
+      text-decoration: none;
+    }
+    .info-box {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .contact-box {
+      background: var(--dark);
+      color: white;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .contact-box a { color: #ff6b6b; }
+    .governance-role {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+    }
+    .governance-role span:first-child {
+      font-weight: 600;
+      color: var(--dark);
+    }
+    details {
+      margin: 1rem 0;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--dark);
+      padding: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      section { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Regroupement des pompiers volontaires du Grand Gaspé</h1>
+  <p>Restez informés, restez unis. Portail des membres pour consulter les dernières nouvelles, accéder aux documents importants et suivre le calendrier des événements.</p>
+</header>
+
+<div class="container">
+
+  <!-- COMMUNICATIONS -->
+  <section>
+    <h2>Préférences de communications</h2>
+    <h3>Courrier indésirable</h3>
+    <p>Vérifiez vos courriels, ainsi que le dossier de courrier indésirable afin de vous assurer que nos communications sont reconnues comme légitimes par votre fournisseur de service de courriels.</p>
+    <h3>Abonnement</h3>
+    <p>Veuillez nous informer par courriel d'un changement d'adresse courriel, pour ajouter ou remplacer une adresse à votre dossier. <a href="mailto:regroupement@incendiegaspe.com">Contactez-nous</a></p>
+    <h3>Désabonnement</h3>
+    <p>Si vous souhaitez ne pas recevoir de communications du Regroupement, veuillez nous en faire part clairement par courriel ou téléphone. <a href="mailto:regroupement@incendiegaspe.com">Contactez-nous</a></p>
+    <div class="info-box">Conformément à la Loi 25, le Regroupement applique sa Politique de confidentialité et de protection des renseignements personnels qui régit aussi les communications entre le Regroupement et ses membres.</div>
+  </section>
+
+  <!-- NOUVELLES -->
+  <section>
+    <h2>Nouvelles et communiqués</h2>
+    <ul>
+      <li>2025-02-20 - MODIFICATION: Avis de convocation à une assemblée générale des membres (2026-03-02)</li>
+      <li>2025-02-02 - Avis de convocation à une assemblée générale des membres (2026-03-12)</li>
+      <li>2025-12-15 - Avis de signature de l'entente de la nouvelle entente de travail 2023-2027</li>
+      <li>2024-12-06 - Avis de convocation à une assemblée générale des membres (2024-12-17)</li>
+      <li>2024-12-05 - Avis de changement d'occupation de postes (suite à 2 démissions)</li>
+      <li>2024-12-01 - Avis de convocation à l'Assemblée du conseil élargi (CMEL-24D)</li>
+      <li>2024-11-26 - RAPPEL: Invitation à la caserne des pompiers pour discussions et réception de propositions reliées aux négociations</li>
+      <li>2024-11-21 - Invitation à la caserne des pompiers pour discussions et réception de propositions reliées aux négociations de l'entente de travail</li>
+      <li>2024-11-17 - MODIFICATION: Avis de convocation à l'assemblée du Conseil élargi (CMEL-24A)</li>
+      <li>2024-11-16 - Avis de convocation à l'assemblée du Conseil d'administration (Réunion CMEX-24A)</li>
+      <li>2024-11-16 - Courriel avec les liens aux Procès verbaux de l'Assemblée extraordinaire et l'Assemblée générale annuelle du 2024-11-06</li>
+      <li>2024-10-28 - Présentation préliminaire des documents pour les deux assemblées des membres</li>
+      <li>2024-10-25 - Lancement des activités et des communications du Regroupement</li>
+      <li>2024-10-25 - Avis de convocation à l'Assemblée extraordinaire des membres et à l'Assemblée générale annuelle 2024</li>
+      <li>2024-10-25 - Formulaire web pour confirmer son intention de participation</li>
+      <li>2024-10-25 - Appel à propositions via le sondage confidentiel des membres pour la nouvelle Entente de travail</li>
+      <li>2024-10-24 - Formulaire web de déposition de propositions</li>
+    </ul>
+  </section>
+
+  <!-- DOCUMENTS -->
+  <section>
+    <h2>Documents du Regroupement</h2>
+    <p>Cliquez sur l'un des documents suivants pour le consulter et/ou télécharger:</p>
+    <a class="doc-link" href="docs/reglement-no1.pdf">Règlement No. 1 du Regroupement</a>
+    <a class="doc-link" href="docs/reglement-no2.pdf">Règlement No. 2 du Regroupement</a>
+    <a class="doc-link" href="docs/entente-2023-2029.pdf">Entente de travail (2023-01-01 à 2029-12-31; effectif 2025-12-15 avec rétro)</a>
+    <a class="doc-link" href="docs/salaires-2025.pdf">Salaires des pompiers 2025, incluant le rétro 2023-2029</a>
+    <a class="doc-link" href="docs/assurances-vie-2026.pdf">2026-01-25 - Assurances vie - augmentation de la prestation</a>
+    <a class="doc-link" href="docs/entente-2016-2022.pdf">Entente de travail (2016-01-01 à 2022-12-31; expirée mais toujours en vigueur)</a>
+    <a class="doc-link" href="docs/salaires-2024.pdf">Salaires des pompiers 2024, incluant le rétro</a>
+    <a class="doc-link" href="docs/politique-confidentialite.pdf">Politique de confidentialité et de protection des renseignements personnels</a>
+    <a class="doc-link" href="docs/pv-aga-2024-11-06.pdf">2024-11-16 - Procès verbal de l'Assemblée générale annuelle du 2024-11-06</a>
+    <a class="doc-link" href="docs/pv-ae-2024-11-06.pdf">2024-11-16 - Procès verbal de l'Assemblée extraordinaire des membres du 2024-11-06</a>
+    <a class="doc-link" href="docs/pv-ca-2024-11-17.pdf">2024-11-16 - Procès verbal de l'Assemblée du Conseil d'administration du 2024-11-17</a>
+    <a class="doc-link" href="docs/pv-cel-2024-11-19.pdf">2024-11-19 - Procès verbal de l'Assemblée du Conseil élargi du 2024-11-19</a>
+    <a class="doc-link" href="docs/pv-cel-2024-11-24.pdf">2024-11-24 - Procès verbal de l'Assemblée du Conseil élargi du 2024-11-24</a>
+  </section>
+
+  <!-- CALENDRIER -->
+  <section>
+    <h2>Calendrier</h2>
+
+    <details>
+      <summary>Événements à venir</summary>
+      <ul>
+        <li>2026-03-02 - Assemblée générale annuelle 2026</li>
+        <li>2026-03-12 - Réunion entre le Comité de relations de travail et la Partie patronale (première de 2026)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Événements récents (2025)</summary>
+      <ul>
+        <li>2025-08-20 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2025-08-13 - Assemblée extraordinaire des membres (suite) pour la présentation de la contre-proposition</li>
+        <li>2025-08-07 - Assemblée extraordinaire des membres pour la présentation et adoption de la contre-proposition</li>
+        <li>2025-07-03 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2025-05-05 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2025-03-05 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2025-02-05 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2025-01-22 - Réunion entre le Comité de négociation et la partie patronale</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Événements récents (2024)</summary>
+      <ul>
+        <li>2024-12-18 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2024-12-17 - 19h00 - AG des membres du Regroupement</li>
+        <li>2024-12-08 - Assemblée du Conseil élargi pour réviser l'ensemble des propositions</li>
+        <li>2024-11-27 - 19h00 - Rassemblement des pompiers (casernes 45, 46, 47, 52)</li>
+        <li>2024-11-26 - 19h00 - Rassemblement des pompiers des casernes 48 et 49</li>
+        <li>2024-11-26 - Réunion entre le Comité de négociation et la partie patronale</li>
+        <li>2024-11-24 - 19h00 - Assemblée du Conseil élargi @ Google Meet</li>
+        <li>2024-11-19 - 19h30 - Assemblée du Conseil élargi @ Google Meet</li>
+        <li>2024-11-17 - 15h00 - Assemblée du Conseil d'administration @ Google Meet</li>
+        <li>2024-11-06 - 19h45 - Assemblée annuelle générale des membres @ Salle de St-Majorique</li>
+        <li>2024-11-06 - 19h00 - Assemblée extraordinaire des membres @ Salle de St-Majorique</li>
+        <li>2024-10-25 - Envoie de premières communications officielles du CA</li>
+        <li>2024-10-16 - Réunion informelle entre le CA et la partie patronale</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- GOUVERNANCE -->
+  <section>
+    <h2>Gouvernance</h2>
+    <p>Le mandat des postes du Conseil d'administration et des Personnes dirigeantes est de trois (3) ans ou aussi longtemps que les personnes leur succédant n'ont pas été élues.</p>
+
+    <h3>Responsable de la protection des renseignements personnels (Loi 25)</h3>
+    <p>Adam Normand (effectif le 2024-11-05)</p>
+
+    <h3>Conseil d'administration (effectif le 2024-11-07)</h3>
+    <div class="governance-role"><span>PRÉSIDENT</span><span>Adam Normand</span></div>
+    <div class="governance-role"><span>SECRÉTAIRE</span><span>Louis-Philippe Laurin (intérim depuis 2024-11-20)</span></div>
+    <div class="governance-role"><span>TRÉSORIER</span><span>Bruno Lévesque</span></div>
+
+    <h3>Conseil élargi (effectif le 2024-11-07)</h3>
+    <div class="governance-role"><span>PRÉSIDENT</span><span>Adam Normand</span></div>
+    <div class="governance-role"><span>SECRÉTAIRE</span><span>Louis-Philippe Laurin (intérim)</span></div>
+    <div class="governance-role"><span>TRÉSORIER</span><span>Bruno Lévesque</span></div>
+    <div class="governance-role"><span>DÉLÉGUÉ NORD</span><span>Jonathan Leblanc</span></div>
+    <div class="governance-role"><span>DÉLÉGUÉ NORD</span><span>Poste vacant (démission Jean-Michel Aspirault)</span></div>
+    <div class="governance-role"><span>DÉLÉGUÉ NORD</span><span>Julien Tissier</span></div>
+    <div class="governance-role"><span>DÉLÉGUÉ SUD</span><span>Marco Dubé</span></div>
+    <div class="governance-role"><span>DÉLÉGUÉ SUD</span><span>Mitchell Légresley</span></div>
+    <div class="governance-role"><span>DÉLÉGUÉ SUD</span><span>Charles-Olivier Henry (démissionné)</span></div>
+  </section>
+
+  <!-- RESSOURCES -->
+  <section>
+    <h2>Ressources de l'employeur</h2>
+    <a class="doc-link" href="docs/salaires-2024.pdf">Salaires des pompiers 2024, incluant le rétro</a>
+    <a class="doc-link" href="docs/entente-2016-2022.pdf">Entente de travail (2016-01-01 à 2022-12-31)</a>
+    <a class="doc-link" href="docs/modification-entente-2024-09-27.pdf">2024-09-27 - Modification mineur à l'Entente (jour férié réconciliation)</a>
+    <a class="doc-link" href="docs/ssq-brochure-assurances.pdf">SSQ - Brochure Régime d'assurances collectives</a>
+    <a class="doc-link" href="docs/ssq-resume-assurances.pdf">SSQ - Document résumé sur les Assurances collectives</a>
+    <a class="doc-link" href="docs/axa-assurance-vie.pdf">AXA - Assurances vie 100K$</a>
+    <a class="doc-link" href="docs/organigramme-ssi-2024.pdf">Organigramme du SSI Gaspé (Août 2024)</a>
+    <a class="doc-link" href="docs/description-pompier-tp.pdf">Description de la fonction - Pompier à temps partiel</a>
+    <a class="doc-link" href="docs/description-lieutenant-tp.pdf">Description de la fonction - Lieutenant à temps partiel</a>
+    <a class="doc-link" href="docs/programme-prevention-2024.pdf">Programme de prévention Service protection contre les incendies (2024-10-30)</a>
+    <a class="doc-link" href="docs/guide-entretien-habit.pdf">Guide d'entretien de l'habit de combat</a>
+    <a class="doc-link" href="docs/formulaire-accuse-reception.pdf">Formulaire d'accusé de réception / engagement</a>
+    <a class="doc-link" href="docs/pon-001.pdf">PON-001 - Sorties des unités (V2015-06-01)</a>
+    <a class="doc-link" href="docs/pon-002.pdf">PON-002 - Personnel à bord des unités (V2015-06-01)</a>
+    <a class="doc-link" href="docs/pon-003.pdf">PON-003 - Véhicule d'état major (V2015-06-01)</a>
+    <a class="doc-link" href="docs/pon-004.pdf">PON-004 - Prise de présences (V2015-06-01)</a>
+    <a class="doc-link" href="docs/pon-005.pdf">PON-005 - Programme d'entraînement des pompiers (V2018-01-01)</a>
+    <a class="doc-link" href="docs/pon-006.pdf">PON-006 - Dénombrement des pompiers (V2020-11-01)</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="contact-box">
+      <h2 style="color:white;border:none;">Contactez-nous</h2>
+      <p>148, boul. de Gaspé, Gaspé (QC) G4X 1A9</p>
+      <p><a href="mailto:regroupement@incendiegaspe.com">regroupement@incendiegaspe.com</a></p>
+      <p><a href="tel:+15142223064">+1 514-222-3064</a></p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2024-2026 Regroupement des pompiers volontaires du Grand Gaspé. Tous droits réservés.
+</footer>
+
+</body>
+</html>
